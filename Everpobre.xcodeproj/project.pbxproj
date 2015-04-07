@@ -13,6 +13,13 @@
 		59F016A71AD4794F00F36FE6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F016A51AD4794F00F36FE6 /* LaunchScreen.xib */; };
 		59F016B31AD4794F00F36FE6 /* EverpobreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016B21AD4794F00F36FE6 /* EverpobreTests.m */; };
 		59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */; };
+		59F016C21AD486A000F36FE6 /* AGTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016C11AD486A000F36FE6 /* AGTCoreDataStack.m */; };
+		59F016E11AD490F200F36FE6 /* _FLGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016D61AD490F200F36FE6 /* _FLGNote.m */; };
+		59F016E21AD490F200F36FE6 /* _FLGNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016D81AD490F200F36FE6 /* _FLGNotebook.m */; };
+		59F016E31AD490F200F36FE6 /* _FLGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016DA1AD490F200F36FE6 /* _FLGPhoto.m */; };
+		59F016E41AD490F200F36FE6 /* FLGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016DC1AD490F200F36FE6 /* FLGNote.m */; };
+		59F016E51AD490F200F36FE6 /* FLGNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016DE1AD490F200F36FE6 /* FLGNotebook.m */; };
+		59F016E61AD490F200F36FE6 /* FLGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016E01AD490F200F36FE6 /* FLGPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,20 @@
 		59F016B11AD4794F00F36FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F016B21AD4794F00F36FE6 /* EverpobreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverpobreTests.m; sourceTree = "<group>"; };
 		59F016BD1AD47AB100F36FE6 /* FLGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLGModel.xcdatamodel; sourceTree = "<group>"; };
+		59F016C01AD486A000F36FE6 /* AGTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataStack.h; sourceTree = "<group>"; };
+		59F016C11AD486A000F36FE6 /* AGTCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataStack.m; sourceTree = "<group>"; };
+		59F016D51AD490F200F36FE6 /* _FLGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FLGNote.h; sourceTree = "<group>"; };
+		59F016D61AD490F200F36FE6 /* _FLGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FLGNote.m; sourceTree = "<group>"; };
+		59F016D71AD490F200F36FE6 /* _FLGNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FLGNotebook.h; sourceTree = "<group>"; };
+		59F016D81AD490F200F36FE6 /* _FLGNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FLGNotebook.m; sourceTree = "<group>"; };
+		59F016D91AD490F200F36FE6 /* _FLGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FLGPhoto.h; sourceTree = "<group>"; };
+		59F016DA1AD490F200F36FE6 /* _FLGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FLGPhoto.m; sourceTree = "<group>"; };
+		59F016DB1AD490F200F36FE6 /* FLGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNote.h; sourceTree = "<group>"; };
+		59F016DC1AD490F200F36FE6 /* FLGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNote.m; sourceTree = "<group>"; };
+		59F016DD1AD490F200F36FE6 /* FLGNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNotebook.h; sourceTree = "<group>"; };
+		59F016DE1AD490F200F36FE6 /* FLGNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNotebook.m; sourceTree = "<group>"; };
+		59F016DF1AD490F200F36FE6 /* FLGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGPhoto.h; sourceTree = "<group>"; };
+		59F016E01AD490F200F36FE6 /* FLGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +138,31 @@
 		59F016BF1AD47ABD00F36FE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59F016E71AD490FD00F36FE6 /* Machine */,
+				59F016DB1AD490F200F36FE6 /* FLGNote.h */,
+				59F016DC1AD490F200F36FE6 /* FLGNote.m */,
+				59F016DD1AD490F200F36FE6 /* FLGNotebook.h */,
+				59F016DE1AD490F200F36FE6 /* FLGNotebook.m */,
+				59F016DF1AD490F200F36FE6 /* FLGPhoto.h */,
+				59F016E01AD490F200F36FE6 /* FLGPhoto.m */,
+				59F016C01AD486A000F36FE6 /* AGTCoreDataStack.h */,
+				59F016C11AD486A000F36FE6 /* AGTCoreDataStack.m */,
 				59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		59F016E71AD490FD00F36FE6 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				59F016D51AD490F200F36FE6 /* _FLGNote.h */,
+				59F016D61AD490F200F36FE6 /* _FLGNote.m */,
+				59F016D71AD490F200F36FE6 /* _FLGNotebook.h */,
+				59F016D81AD490F200F36FE6 /* _FLGNotebook.m */,
+				59F016D91AD490F200F36FE6 /* _FLGPhoto.h */,
+				59F016DA1AD490F200F36FE6 /* _FLGPhoto.m */,
+			);
+			name = Machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +266,14 @@
 			files = (
 				59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */,
 				59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */,
+				59F016E61AD490F200F36FE6 /* FLGPhoto.m in Sources */,
+				59F016E21AD490F200F36FE6 /* _FLGNotebook.m in Sources */,
+				59F016E51AD490F200F36FE6 /* FLGNotebook.m in Sources */,
+				59F016E41AD490F200F36FE6 /* FLGNote.m in Sources */,
+				59F016C21AD486A000F36FE6 /* AGTCoreDataStack.m in Sources */,
 				59F0169F1AD4794F00F36FE6 /* main.m in Sources */,
+				59F016E11AD490F200F36FE6 /* _FLGNote.m in Sources */,
+				59F016E31AD490F200F36FE6 /* _FLGPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
