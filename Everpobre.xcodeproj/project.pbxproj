@@ -12,6 +12,7 @@
 		59F016A41AD4794F00F36FE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F016A31AD4794F00F36FE6 /* Images.xcassets */; };
 		59F016A71AD4794F00F36FE6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F016A51AD4794F00F36FE6 /* LaunchScreen.xib */; };
 		59F016B31AD4794F00F36FE6 /* EverpobreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016B21AD4794F00F36FE6 /* EverpobreTests.m */; };
+		59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		59F016AC1AD4794F00F36FE6 /* EverpobreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverpobreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F016B11AD4794F00F36FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F016B21AD4794F00F36FE6 /* EverpobreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EverpobreTests.m; sourceTree = "<group>"; };
+		59F016BD1AD47AB100F36FE6 /* FLGModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLGModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		59F0169B1AD4794F00F36FE6 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				59F016BF1AD47ABD00F36FE6 /* Models */,
 				59F016A01AD4794F00F36FE6 /* AppDelegate.h */,
 				59F016A11AD4794F00F36FE6 /* AppDelegate.m */,
 				59F016A31AD4794F00F36FE6 /* Images.xcassets */,
@@ -109,6 +112,14 @@
 				59F016B11AD4794F00F36FE6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59F016BF1AD47ABD00F36FE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */,
 				59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */,
 				59F0169F1AD4794F00F36FE6 /* main.m in Sources */,
 			);
@@ -404,6 +416,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59F016BD1AD47AB100F36FE6 /* FLGModel.xcdatamodel */,
+			);
+			currentVersion = 59F016BD1AD47AB100F36FE6 /* FLGModel.xcdatamodel */;
+			path = FLGModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 59F016911AD4794F00F36FE6 /* Project object */;
 }
