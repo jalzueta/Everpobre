@@ -7,15 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTCoreDataStack.h"
+#import "FLGNotebook.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) AGTCoreDataStack *stack;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // Creamos una propiedad del DataStack
+    self.stack = [AGTCoreDataStack coreDataStackWithModelName:@"FLGModel"];
+    
+    // Creamos datos chorras
+    [self createDummyData];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -44,5 +54,22 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (void) createDummyData{
+    
+    // Sin Mogenerator
+//    FLGNotebook *exs = [NSEntityDescription insertNewObjectForEntityForName:@"Notebook"
+//                                                     inManagedObjectContext:self.stack.context];
+    
+    // Con Mogenerator
+//    FLGNotebook *exs = [FLGNotebook insertInManagedObjectContext:self.stack.context];
+    
+    // Inicializar la libreta con datos - Metodo de clase creado por nosotros
+    FLGNotebook *exs = [FLGNotebook notebookWithName:@"Ex-novias para el recuerdo"
+                                             context:self.stack.context];
+    
+}
+
 
 @end
