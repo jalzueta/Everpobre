@@ -10,6 +10,7 @@
 #import "AGTCoreDataStack.h"
 #import "FLGNotebook.h"
 #import "FLGNote.h"
+#import "FLGNotebooksViewController.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *stack;
@@ -26,8 +27,28 @@
     // Creamos datos chorras
     [self createDummyData];
     
+    // Creamos un fetchRequest
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[FLGNotebook entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FLGNotebookAttributes.name
+                                                          ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                            [NSSortDescriptor sortDescriptorWithKey:FLGNotebookAttributes.modificationDate
+                                                          ascending:NO]];
+    
+    req.fetchBatchSize = 20;
+    
+    // Creamos un FetchedResultsController
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]
+                                      initWithFetchRequest:req
+                                      managedObjectContext:self.stack.context
+                                      sectionNameKeyPath:nil cacheName:nil];
+    
+    // Creamos el controller
+    FLGNotebooksViewController *nVC = [[FLGNotebooksViewController alloc] initWithFetchedResultsController:fc style:UITableViewStylePlain];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.window.rootViewController = nVC;
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

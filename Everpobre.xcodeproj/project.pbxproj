@@ -19,11 +19,10 @@
 		59F016E41AD490F200F36FE6 /* FLGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016DC1AD490F200F36FE6 /* FLGNote.m */; };
 		59F016E51AD490F200F36FE6 /* FLGNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016DE1AD490F200F36FE6 /* FLGNotebook.m */; };
 		59F016E61AD490F200F36FE6 /* FLGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016E01AD490F200F36FE6 /* FLGPhoto.m */; };
-		59F016F01AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016E91AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m */; };
 		59F016F11AD5A99A00F36FE6 /* AGTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016EB1AD5A99A00F36FE6 /* AGTCoreDataStack.m */; };
 		59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */; };
-		59F016F31AD5A99A00F36FE6 /* AGTEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016EF1AD5A99A00F36FE6 /* AGTEntityObserver.m */; };
 		59F016F71AD5C26200F36FE6 /* FLGEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */; };
+		59F016FC1AD5D50F00F36FE6 /* FLGNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,16 +59,14 @@
 		59F016DE1AD490F200F36FE6 /* FLGNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNotebook.m; sourceTree = "<group>"; };
 		59F016DF1AD490F200F36FE6 /* FLGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGPhoto.h; sourceTree = "<group>"; };
 		59F016E01AD490F200F36FE6 /* FLGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGPhoto.m; sourceTree = "<group>"; };
-		59F016E81AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataCollectionViewController.h; sourceTree = "<group>"; };
-		59F016E91AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		59F016EA1AD5A99A00F36FE6 /* AGTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataStack.h; sourceTree = "<group>"; };
 		59F016EB1AD5A99A00F36FE6 /* AGTCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataStack.m; sourceTree = "<group>"; };
 		59F016EC1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
 		59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
-		59F016EE1AD5A99A00F36FE6 /* AGTEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEntityObserver.h; sourceTree = "<group>"; };
-		59F016EF1AD5A99A00F36FE6 /* AGTEntityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEntityObserver.m; sourceTree = "<group>"; };
 		59F016F51AD5C26200F36FE6 /* FLGEverpobreBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGEverpobreBaseClass.h; sourceTree = "<group>"; };
 		59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGEverpobreBaseClass.m; sourceTree = "<group>"; };
+		59F016F91AD5D50F00F36FE6 /* FLGNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNotebooksViewController.h; sourceTree = "<group>"; };
+		59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNotebooksViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +108,7 @@
 		59F0169B1AD4794F00F36FE6 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				59F016F81AD5D3D500F36FE6 /* Controllers */,
 				59F016BF1AD47ABD00F36FE6 /* Models */,
 				59F016A01AD4794F00F36FE6 /* AppDelegate.h */,
 				59F016A11AD4794F00F36FE6 /* AppDelegate.m */,
@@ -181,16 +179,21 @@
 		59F016F41AD5A9A800F36FE6 /* Core Data Stack */ = {
 			isa = PBXGroup;
 			children = (
-				59F016E81AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.h */,
-				59F016E91AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m */,
 				59F016EA1AD5A99A00F36FE6 /* AGTCoreDataStack.h */,
 				59F016EB1AD5A99A00F36FE6 /* AGTCoreDataStack.m */,
-				59F016EC1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.h */,
-				59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */,
-				59F016EE1AD5A99A00F36FE6 /* AGTEntityObserver.h */,
-				59F016EF1AD5A99A00F36FE6 /* AGTEntityObserver.m */,
 			);
 			name = "Core Data Stack";
+			sourceTree = "<group>";
+		};
+		59F016F81AD5D3D500F36FE6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59F016EC1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.h */,
+				59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */,
+				59F016F91AD5D50F00F36FE6 /* FLGNotebooksViewController.h */,
+				59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +297,7 @@
 			files = (
 				59F016F71AD5C26200F36FE6 /* FLGEverpobreBaseClass.m in Sources */,
 				59F016F11AD5A99A00F36FE6 /* AGTCoreDataStack.m in Sources */,
-				59F016F01AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m in Sources */,
+				59F016FC1AD5D50F00F36FE6 /* FLGNotebooksViewController.m in Sources */,
 				59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */,
 				59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */,
 				59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */,
@@ -302,7 +305,6 @@
 				59F016E21AD490F200F36FE6 /* _FLGNotebook.m in Sources */,
 				59F016E51AD490F200F36FE6 /* FLGNotebook.m in Sources */,
 				59F016E41AD490F200F36FE6 /* FLGNote.m in Sources */,
-				59F016F31AD5A99A00F36FE6 /* AGTEntityObserver.m in Sources */,
 				59F0169F1AD4794F00F36FE6 /* main.m in Sources */,
 				59F016E11AD490F200F36FE6 /* _FLGNote.m in Sources */,
 				59F016E31AD490F200F36FE6 /* _FLGPhoto.m in Sources */,
