@@ -59,6 +59,9 @@
 
 - (void) createDummyData{
     
+    // Elimino datos anteriores
+    [self.stack zapAllData];
+    
     // Sin Mogenerator
 //    FLGNotebook *exs = [NSEntityDescription insertNewObjectForEntityForName:@"Notebook"
 //                                                     inManagedObjectContext:self.stack.context];
@@ -70,14 +73,69 @@
     FLGNotebook *exs = [FLGNotebook notebookWithName:@"Ex-novias para el recuerdo"
                                              context:self.stack.context];
     
-    FLGNote *n = [FLGNote noteWithName:@"Mariana Dávalos"
-                              notebook:exs
-                               context:self.stack.context];
     
-    NSLog(@"libreta: %@", exs);
-    NSLog(@"nota: %@", n);
+    //Creamos nuevos objetos
+    // Lo creamos y lo insertamos en el contexto. No hace falta guardarlo en un objeto
+    [FLGNote noteWithName:@"Mariana Dávalos"
+                 notebook:exs
+                  context:self.stack.context];
     
-    n.text = @"Hermana gemela de Camila";
+    [FLGNote noteWithName:@"Camila Dávalos"
+                 notebook:exs
+                  context:self.stack.context];
+    
+    [FLGNote noteWithName:@"Pampita"
+                 notebook:exs
+                  context:self.stack.context];
+    
+    FLGNote *vega = [FLGNote noteWithName:@"María Teresa de la Vega"
+                 notebook:exs
+                  context:self.stack.context];
+    
+//    NSLog(@"Una nota: %@", vega);
+    
+    
+    // Busqueda de objetos -> NSFetchRequest
+    // Sin Mogenerator
+//    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:@"Notebook"];
+    
+    // Con Mogenerator
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[FLGNote entityName]];
+    
+    // Criterios de ordenación para los resultados de la busqueda
+    // caseInsensitiveCompare: compara sin tener en cuenta las mayusculas y las minusculas.
+    // Si no, "U" saldría antes que "a"
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FLGNoteAttributes.name
+                                                          ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                            [NSSortDescriptor sortDescriptorWithKey:FLGNoteAttributes.modificationDate
+                                                          ascending:NO]];
+    
+    // Numero maximo de objetos
+//    req.fetchLimit = 10;
+    
+    // Numero de objetos en cada lote
+    req.fetchBatchSize = 20;
+    
+    // Filtro de busqueda -> Mirar en el curso On-line
+    // Las notas del notebook "exs"
+    req.predicate = [NSPredicate predicateWithFormat:@"notebook = %@", exs];
+    
+    // Ejecutamos la busqueda
+    // Nos devuelve algo que parece un NSArray pero no lo es, es un __NSArrayI (un objeto que cumple con la interfaz publica de los NSArray, pero que no lo es). De hecho los objetos que devuelve la busqueda no están en memoria, sino que este objeto va a buscarlos a CoreData cuando los pidamos.
+    NSArray *results = [self.stack executeFetchRequest:req
+                                            errorBlock:^(NSError *error) {
+        NSLog(@"Error al buscar! %@", error);
+    }];
+    
+    
+    // Borrar
+    // Marcamos el objeto como objeto a borrar cuando se guarde el contexto
+    [self.stack.context deleteObject:vega];
+    
+    // Guardar
+    [self.stack saveWithErrorBlock:^(NSError *error) {
+        NSLog(@"Error al guardar!: %@", error);
+    }];
 }
 
 
