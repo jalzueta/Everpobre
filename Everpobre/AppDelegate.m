@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AGTCoreDataStack.h"
 #import "FLGNotebook.h"
+#import "FLGNote.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *stack;
@@ -69,6 +70,14 @@
     FLGNotebook *exs = [FLGNotebook notebookWithName:@"Ex-novias para el recuerdo"
                                              context:self.stack.context];
     
+    FLGNote *n = [FLGNote noteWithName:@"Mariana Dávalos"
+                              notebook:exs
+                               context:self.stack.context];
+    
+    NSLog(@"libreta: %@", exs);
+    NSLog(@"nota: %@", n);
+    
+    n.text = @"Hermana gemela de Camila";
 }
 
 

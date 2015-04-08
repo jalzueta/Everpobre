@@ -19,8 +19,8 @@
         <relationship name="notes" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="photo" inverseEntity="Note" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Notebook" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Note" positionX="-54" positionY="18" width="128" height="133"/>
+        <element name="Notebook" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Photo" positionX="-45" positionY="72" width="128" height="73"/>
     </elements>
 </model>

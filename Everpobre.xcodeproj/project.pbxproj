@@ -23,6 +23,7 @@
 		59F016F11AD5A99A00F36FE6 /* AGTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016EB1AD5A99A00F36FE6 /* AGTCoreDataStack.m */; };
 		59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */; };
 		59F016F31AD5A99A00F36FE6 /* AGTEntityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016EF1AD5A99A00F36FE6 /* AGTEntityObserver.m */; };
+		59F016F71AD5C26200F36FE6 /* FLGEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
 		59F016EE1AD5A99A00F36FE6 /* AGTEntityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEntityObserver.h; sourceTree = "<group>"; };
 		59F016EF1AD5A99A00F36FE6 /* AGTEntityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEntityObserver.m; sourceTree = "<group>"; };
+		59F016F51AD5C26200F36FE6 /* FLGEverpobreBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGEverpobreBaseClass.h; sourceTree = "<group>"; };
+		59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGEverpobreBaseClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				59F016E01AD490F200F36FE6 /* FLGPhoto.m */,
 				59F016F41AD5A9A800F36FE6 /* Core Data Stack */,
 				59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */,
+				59F016F51AD5C26200F36FE6 /* FLGEverpobreBaseClass.h */,
+				59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F016F71AD5C26200F36FE6 /* FLGEverpobreBaseClass.m in Sources */,
 				59F016F11AD5A99A00F36FE6 /* AGTCoreDataStack.m in Sources */,
 				59F016F01AD5A99A00F36FE6 /* AGTCoreDataCollectionViewController.m in Sources */,
 				59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */,

@@ -2,6 +2,7 @@
 // Make changes to FLGNotebook.h instead.
 
 @import CoreData;
+#import "FLGEverpobreBaseClass.h"
 
 extern const struct FLGNotebookAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -18,7 +19,7 @@ extern const struct FLGNotebookRelationships {
 @interface FLGNotebookID : NSManagedObjectID {}
 @end
 
-@interface _FLGNotebook : NSManagedObject {}
+@interface _FLGNotebook : FLGEverpobreBaseClass {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
