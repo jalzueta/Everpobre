@@ -23,6 +23,7 @@
 		59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016ED1AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m */; };
 		59F016F71AD5C26200F36FE6 /* FLGEverpobreBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */; };
 		59F016FC1AD5D50F00F36FE6 /* FLGNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */; };
+		59F017011AD5DC2D00F36FE6 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F017001AD5DC2D00F36FE6 /* UIViewController+Navigation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		59F016F61AD5C26200F36FE6 /* FLGEverpobreBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGEverpobreBaseClass.m; sourceTree = "<group>"; };
 		59F016F91AD5D50F00F36FE6 /* FLGNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNotebooksViewController.h; sourceTree = "<group>"; };
 		59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNotebooksViewController.m; sourceTree = "<group>"; };
+		59F016FF1AD5DC2D00F36FE6 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		59F017001AD5DC2D00F36FE6 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		59F0169B1AD4794F00F36FE6 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				59F016FE1AD5DB9600F36FE6 /* Categories */,
 				59F016F81AD5D3D500F36FE6 /* Controllers */,
 				59F016BF1AD47ABD00F36FE6 /* Models */,
 				59F016A01AD4794F00F36FE6 /* AppDelegate.h */,
@@ -194,6 +198,15 @@
 				59F016FA1AD5D50F00F36FE6 /* FLGNotebooksViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		59F016FE1AD5DB9600F36FE6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				59F016FF1AD5DC2D00F36FE6 /* UIViewController+Navigation.h */,
+				59F017001AD5DC2D00F36FE6 /* UIViewController+Navigation.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +312,7 @@
 				59F016F11AD5A99A00F36FE6 /* AGTCoreDataStack.m in Sources */,
 				59F016FC1AD5D50F00F36FE6 /* FLGNotebooksViewController.m in Sources */,
 				59F016F21AD5A99A00F36FE6 /* AGTCoreDataTableViewController.m in Sources */,
+				59F017011AD5DC2D00F36FE6 /* UIViewController+Navigation.m in Sources */,
 				59F016BE1AD47AB100F36FE6 /* FLGModel.xcdatamodeld in Sources */,
 				59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */,
 				59F016E61AD490F200F36FE6 /* FLGPhoto.m in Sources */,

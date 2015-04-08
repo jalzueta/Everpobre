@@ -11,6 +11,7 @@
 #import "FLGNotebook.h"
 #import "FLGNote.h"
 #import "FLGNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *stack;
@@ -47,7 +48,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = nVC;
+    // Usamos un metodo definido en la categoria "UIViewController+Navigation"
+    self.window.rootViewController = [nVC wrappedInNavigationController];
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
