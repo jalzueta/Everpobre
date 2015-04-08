@@ -43,6 +43,8 @@
     if (_storeCoordinator == nil) {
         _storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.model];
         
+
+        
         NSError *err = nil;
         if (![_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                              configuration:nil
@@ -153,7 +155,7 @@
     
     _context = nil;
     _storeCoordinator = nil;
-    [self context]; // this will rebuild the stack
+    _context = [self context]; // this will rebuild the stack
 
 }
 
@@ -173,21 +175,31 @@
         
     }else if (self.context.hasChanges) {
         if (![self.context save:&err]) {
-            errorBlock(err);
+            if (errorBlock != nil) {
+                errorBlock(err);
+            }
+            
         }
     }
     
 }
 
-
-
-
-
-
-
-
-
-
+-(NSArray *) executeFetchRequest:(NSFetchRequest *)req
+                      errorBlock:(void(^)(NSError *error)) errorBlock{
+    
+    NSError *err;
+    NSArray *res = [self.context executeFetchRequest:req
+                                               error:&err];
+    
+    if (res == nil) {
+        // la cagamos
+        if (errorBlock != nil) {
+            errorBlock(err);
+        }
+        
+    }
+    return res;
+}
 
 
 @end
