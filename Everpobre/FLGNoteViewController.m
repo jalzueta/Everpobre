@@ -31,6 +31,9 @@
     // Asignamos delegados
     self.nameView.delegate = self;
     
+    // Nos damos de alta en notificaciones de teclado -> las lanza UIWindow
+    [self setupKeyboardNotifications];
+    
     // Sincronizar modelo -> vista
     NSDateFormatter *fmt = [NSDateFormatter new];
     fmt.dateStyle = NSDateFormatterShortStyle;
@@ -44,6 +47,9 @@
 
 - (void) viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    
+    // Baja en notificaciones de teclado
+    [self tearDownKeyboardNotifications];
     
     // Sincronizo vistas -> modelo
     self.model.name = self.nameView.text;
@@ -83,5 +89,44 @@
     // Buen momento para guardar el texto en el modelo. Nosotros lo hemos hecho en el viewWillDisappear
 }
 
+
+#pragma mark - keyboard Notifications
+
+- (void) setupKeyboardNotifications{
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    
+    [nc addObserver:self
+           selector:@selector(notifyThatKeyboardWillAppear:)
+               name:UIKeyboardWillShowNotification
+             object:nil];
+    
+    [nc addObserver:self
+           selector:@selector(notifyThatKeyboardWillDisappear:)
+               name:UIKeyboardWillHideNotification
+             object:nil];
+}
+
+- (void) tearDownKeyboardNotifications{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc removeObserver:self];
+}
+
+// UIKeyboardWillShowNotification
+- (void) notifyThatKeyboardWillAppear: (NSNotification *) n{
+    
+    // Sacar el tamaño (bounds) del keyboard del objeto
+    // userInfo que vien en la notificacion
+    
+    
+    // Calcular los nuevos bounds de self.textView y encogerlo mediante animación que coincida con la de aparicion del teclado
+    
+}
+
+// UIKeyboardWillHideNotification
+- (void) notifyThatKeyboardWillDisappear: (NSNotification *) n{
+    
+    // Devolver a self.textView su bounds original mediante una animacion que coincida con la del teclado
+}
 
 @end
