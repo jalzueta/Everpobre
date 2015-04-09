@@ -29,16 +29,16 @@
     return self;
 }
 
-- (void) viewDidLoad{
-    
-    [super viewDidLoad];
-}
+//- (void) viewDidLoad{
+//    
+//    [super viewDidLoad];
+//}
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
     [self addNewNoteButton];
-    [self addEditNoteButton];
+//    [self addEditNoteButton];
 }
 
 #pragma mark - Table Data Source
