@@ -10,6 +10,7 @@
 #import "FLGNote.h"
 #import "FLGPhoto.h"
 #import "FLGNotebook.h"
+#import "FLGNoteViewController.h"
 
 @interface FLGNotesViewController ()
 @property (strong, nonatomic) FLGNotebook *notebook;
@@ -77,7 +78,18 @@
 
 #pragma mark - Table Delegate
 
-
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // Averiguo la nota
+    FLGNote *n = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Crear el controlador
+    FLGNoteViewController *nVC = [[FLGNoteViewController alloc] initWithModel:n];
+    
+    // Hacer el push
+    [self.navigationController pushViewController:nVC
+                                         animated:YES];
+}
 
 #pragma mark - Utils
 
