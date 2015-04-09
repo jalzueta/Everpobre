@@ -10,6 +10,9 @@
 
 @interface FLGEverpobreBaseClass : NSManagedObject
 
+// Para hacerla la clase base para Mogeneratorejecutar en linea de comandos:
+// mogenerator -v2 -m Model.xcdatamodeld/Model.xcdatamodel/ --base-class AGTEverpobreBaseClass
+
 + (NSArray *) observableKeys;
 
 @end

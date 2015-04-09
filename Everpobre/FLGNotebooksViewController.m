@@ -48,6 +48,20 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+ forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Averiguo la libreta
+        FLGNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        // Inmediatamente lo elimino del modelo
+        [self.fetchedResultsController.managedObjectContext deleteObject:nb];
+        
+        // Para poder mover las celdas, los "notebooks" tendrían que tener una propiedd "userOrder" y la cambiaríamos. Hay que tener en cuenta que el orden de las celdas viene dado por los criterios de ordenación del "fetch" que se realiza, por lo que haría falta una propiedad ordinal para esa maniobra
+    }
+}
 
 #pragma mark - Utils
 
@@ -62,11 +76,6 @@
 }
 
 - (void) addEditNotebookButton{
-    
-//    UIBarButtonItem *editBtnItem = [[UIBarButtonItem alloc]
-//                                   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-//                                   target:self
-//                                   action:@selector(editNotebook:)];
     
     // Toda tabla tiene un editButtonItem
     self.navigationItem.leftBarButtonItem = self.editButtonItem;

@@ -26,7 +26,9 @@
     [self setupKVO];
 }
 
-// Se produce n veces a lo largo de la vida del objeto
+// Se produce n veces a lo largo de la vida del objeto:
+//    - Cada vez que pasa de Fault a objeto con contenido
+//    - Cada vez que se saca un objeto de base de datos
 - (void) awakeFromFetch{
     [super awakeFromFetch];
     // Alta en la notificaciones
