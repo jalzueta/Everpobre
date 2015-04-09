@@ -12,6 +12,7 @@
 #import "FLGNote.h"
 #import "FLGNotebooksViewController.h"
 #import "UIViewController+Navigation.h"
+#import "FLGSettings.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) AGTCoreDataStack *stack;
@@ -54,6 +55,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // Arranco el autosave
+    [self autoSave];
+    
     return YES;
 }
 
@@ -171,5 +176,22 @@
     }];
 }
 
+
+- (void) autoSave{
+    
+    if (AUTO_SAVE) {
+        NSLog(@"Autoguardando");
+        
+        [self.stack saveWithErrorBlock:^(NSError *error) {
+            NSLog(@"Error al autoguardar!: %@", error);
+        }];
+        
+        // Pongo en mi agenda una nueva llamada a "autosave"
+        // En cada vuelta del runloop, se mirará si ha pasado el tiempo y si es así, se ejecutará el método antes de tu código, es decir, al principio del runloop
+        // Todo esto se ejecuta en la cola principal
+        [self performSelector:@selector(autoSave)
+                   withObject:nil afterDelay:AUTO_SAVE_DELAY];
+    }
+}
 
 @end

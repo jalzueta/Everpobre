@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		59DB8CD31AD70A3B0040BDA4 /* FLGNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNotesViewController.h; sourceTree = "<group>"; };
 		59DB8CD41AD70A3B0040BDA4 /* FLGNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNotesViewController.m; sourceTree = "<group>"; };
+		59DB8CD61AD724220040BDA4 /* FLGSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLGSettings.h; sourceTree = "<group>"; };
 		59F016991AD4794F00F36FE6 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F0169D1AD4794F00F36FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F0169E1AD4794F00F36FE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		59F0169B1AD4794F00F36FE6 /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				59DB8CD61AD724220040BDA4 /* FLGSettings.h */,
 				59F016FE1AD5DB9600F36FE6 /* Categories */,
 				59F016F81AD5D3D500F36FE6 /* Controllers */,
 				59F016BF1AD47ABD00F36FE6 /* Models */,
