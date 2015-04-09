@@ -7,31 +7,49 @@
 //
 
 #import "FLGNotesViewController.h"
+#import "FLGNote.h"
+#import "FLGPhoto.h"
+#import "FLGNotebook.h"
 
 @interface FLGNotesViewController ()
-
+@property (strong, nonatomic) FLGNotebook *notebook;
 @end
 
 @implementation FLGNotesViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (id) initWithFetchedResultsController:(NSFetchedResultsController *)aFetchedResultsController
+                                  style:(UITableViewStyle)aStyle
+                               notebook:(FLGNotebook *) notebook{
+    
+    if (self = [super initWithFetchedResultsController:aFetchedResultsController
+                                                 style:aStyle]) {
+        _notebook = notebook;
+        self.title = notebook.name;
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// El metodo que genera la celda
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // Averiguar la nota
+    FLGNote *n = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Crear la celda
+    static NSString *cellId = @"noteCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:cellId];
+    }
+    
+    // Sincronizar nota -> celda
+    cell.imageView.image = n.photo.image;
+    cell.textLabel.text = n.name;
+    
+    // Devolverla
+    return cell;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

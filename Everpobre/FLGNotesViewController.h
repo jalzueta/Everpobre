@@ -8,6 +8,12 @@
 
 #import "AGTCoreDataTableViewController.h"
 
+@class FLGNotebook;
+
 @interface FLGNotesViewController : AGTCoreDataTableViewController
+
+- (id) initWithFetchedResultsController:(NSFetchedResultsController *)aFetchedResultsController
+                                  style:(UITableViewStyle)aStyle
+                               notebook:(FLGNotebook *) notebook;
 
 @end

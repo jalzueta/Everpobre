@@ -8,6 +8,8 @@
 
 #import "FLGNotebooksViewController.h"
 #import "FLGNotebook.h"
+#import "FLGNotesViewController.h"
+#import "FLGNote.h"
 
 @interface FLGNotebooksViewController ()
 
@@ -26,6 +28,8 @@
     [self addNewNotebookButton];
     [self addEditNotebookButton];
 }
+
+#pragma mark - Table DataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -62,6 +66,42 @@
         // Para poder mover las celdas, los "notebooks" tendrían que tener una propiedd "userOrder" y la cambiaríamos. Hay que tener en cuenta que el orden de las celdas viene dado por los criterios de ordenación del "fetch" que se realiza, por lo que haría falta una propiedad ordinal para esa maniobra
     }
 }
+
+#pragma mark - Table Delegate
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // Averiguo la libreta
+    FLGNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    //Creo el fetch result controller
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[FLGNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:FLGNoteAttributes.name
+                                                          ascending:YES selector:@selector(caseInsensitiveCompare:)],
+                            [NSSortDescriptor sortDescriptorWithKey:FLGNoteAttributes.modificationDate
+                                                          ascending:NO]];
+    
+    // Numero de objetos en cada lote
+    req.fetchBatchSize = 20;
+    
+    req.predicate = [NSPredicate predicateWithFormat:@"notebook = %@", nb];
+    
+    //Creo el fetch result controller
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]
+                                      initWithFetchRequest:req
+                                      managedObjectContext:nb.managedObjectContext
+                                      sectionNameKeyPath:nil cacheName:nil];
+    
+    // Creo un controlador de notas
+    FLGNotesViewController *notesVC = [[FLGNotesViewController alloc]
+                                       initWithFetchedResultsController:fc
+                                       style:UITableViewStylePlain notebook:nb];
+    
+    // Hago el push
+    [self.navigationController pushViewController:notesVC
+                                         animated:YES];
+}
+
 
 #pragma mark - Utils
 
