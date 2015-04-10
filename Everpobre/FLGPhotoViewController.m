@@ -31,6 +31,9 @@
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    // Me aseguro que la vista no ocupa toda la pantalla sino lo que queda disponible dentro del navigation
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     // Sincronizo modelo -> vista
     self.photoView.image = self.model.image;
 }
@@ -62,6 +65,13 @@
     
     // Asigno el delegado
     picker.delegate = self;
+    
+    // Customizo la transicion del controlador modal
+    // picker.modalPresentationStyle -> forma en la que se va a presentar
+    // picker.modalTransitionStyle -> animacion que se va a usar al hacer la transicion
+    
+    // ojo si se usa "UIModalTransitionStylePartialCurl" -> No se va a llamar a viewWillDisappear ni a viewWillAppear cuando se produzca la transicion
+    picker.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     // Lo muetro de forma modal
     [self presentViewController:picker
