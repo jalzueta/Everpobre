@@ -8,6 +8,7 @@
 
 #import "FLGPhotoViewController.h"
 #import "FLGPhoto.h"
+@import CoreImage;
 
 @interface FLGPhotoViewController ()
 
@@ -81,7 +82,34 @@
                      }];
 }
 
+// TODO: aplicar el filtro en segundo plano y poner un activity indicator
 - (IBAction)applyFilter:(id)sender {
+    // Los filtros se ejecutan en la GPU -> son muy rapidos, incluso para videos
+    // Creo un contexto de CoreImage
+    CIContext *ctxt = [CIContext contextWithOptions:nil];
+    
+    // Imagen de entrada para el filtro
+    CIImage *inputImg = [CIImage imageWithCGImage:[self.photoView.image CGImage]];
+    
+    // Creo un filtro y lo configuro
+    CIFilter *vintage = [CIFilter filterWithName:@"CIFalseColor"];
+    [vintage setValue:inputImg
+               forKey:kCIInputImageKey];
+    
+    CIImage *outputImg = vintage.outputImage;
+    
+    // Lo aplico
+    CGImageRef out = nil;
+    out = [ctxt createCGImage:outputImg
+                     fromRect:outputImg.extent]; // el tamaño de la imagen de salida del filtro. Es el "frame" de una CIImage
+    
+    // Actualizo el modelo
+    self.model.image = [UIImage imageWithCGImage:out];
+    CGImageRelease(out);
+    
+    // Sustituyo la imagen
+    self.photoView.image = self.model.image;
+    
 }
 
 - (IBAction)deletePhoto:(id)sender {
