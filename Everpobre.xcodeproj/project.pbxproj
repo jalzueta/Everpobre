@@ -10,6 +10,8 @@
 		59DB8CD51AD70A3B0040BDA4 /* FLGNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CD41AD70A3B0040BDA4 /* FLGNotesViewController.m */; };
 		59DB8CDA1AD726970040BDA4 /* FLGNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CD81AD726970040BDA4 /* FLGNoteViewController.m */; };
 		59DB8CDB1AD726970040BDA4 /* FLGNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DB8CD91AD726970040BDA4 /* FLGNoteViewController.xib */; };
+		59DB8CE01AD85A010040BDA4 /* FLGPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CDE1AD85A010040BDA4 /* FLGPhotoViewController.m */; };
+		59DB8CE11AD85A010040BDA4 /* FLGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DB8CDF1AD85A010040BDA4 /* FLGPhotoViewController.xib */; };
 		59F0169F1AD4794F00F36FE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F0169E1AD4794F00F36FE6 /* main.m */; };
 		59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016A11AD4794F00F36FE6 /* AppDelegate.m */; };
 		59F016A41AD4794F00F36FE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F016A31AD4794F00F36FE6 /* Images.xcassets */; };
@@ -46,6 +48,9 @@
 		59DB8CD71AD726970040BDA4 /* FLGNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGNoteViewController.h; sourceTree = "<group>"; };
 		59DB8CD81AD726970040BDA4 /* FLGNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGNoteViewController.m; sourceTree = "<group>"; };
 		59DB8CD91AD726970040BDA4 /* FLGNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLGNoteViewController.xib; sourceTree = "<group>"; };
+		59DB8CDD1AD85A010040BDA4 /* FLGPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGPhotoViewController.h; sourceTree = "<group>"; };
+		59DB8CDE1AD85A010040BDA4 /* FLGPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGPhotoViewController.m; sourceTree = "<group>"; };
+		59DB8CDF1AD85A010040BDA4 /* FLGPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLGPhotoViewController.xib; sourceTree = "<group>"; };
 		59F016991AD4794F00F36FE6 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F0169D1AD4794F00F36FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F0169E1AD4794F00F36FE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +216,9 @@
 				59DB8CD71AD726970040BDA4 /* FLGNoteViewController.h */,
 				59DB8CD81AD726970040BDA4 /* FLGNoteViewController.m */,
 				59DB8CD91AD726970040BDA4 /* FLGNoteViewController.xib */,
+				59DB8CDD1AD85A010040BDA4 /* FLGPhotoViewController.h */,
+				59DB8CDE1AD85A010040BDA4 /* FLGPhotoViewController.m */,
+				59DB8CDF1AD85A010040BDA4 /* FLGPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F016A71AD4794F00F36FE6 /* LaunchScreen.xib in Resources */,
+				59DB8CE11AD85A010040BDA4 /* FLGPhotoViewController.xib in Resources */,
 				59F016A41AD4794F00F36FE6 /* Images.xcassets in Resources */,
 				59DB8CDB1AD726970040BDA4 /* FLGNoteViewController.xib in Resources */,
 			);
@@ -340,6 +349,7 @@
 				59F0169F1AD4794F00F36FE6 /* main.m in Sources */,
 				59F016E11AD490F200F36FE6 /* _FLGNote.m in Sources */,
 				59F016E31AD490F200F36FE6 /* _FLGPhoto.m in Sources */,
+				59DB8CE01AD85A010040BDA4 /* FLGPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
