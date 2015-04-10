@@ -8,6 +8,7 @@
 
 #import "FLGNoteViewController.h"
 #import "FLGNote.h"
+#import "FLGPhotoViewController.h"
 
 @interface FLGNoteViewController ()
 
@@ -59,7 +60,14 @@
 #pragma mark - Actions
 
 - (IBAction)displayPhoto:(id)sender {
-
+    
+    // Crear un controlador de fotos
+    FLGPhotoViewController *photoVC = [[FLGPhotoViewController alloc]
+                                       initWithModel:self.model.photo];
+    
+    // Push
+    [self.navigationController pushViewController:photoVC
+                                         animated:YES];
 }
 
 - (IBAction)hideKeyboard:(id)sender {

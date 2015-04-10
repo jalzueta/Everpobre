@@ -46,6 +46,29 @@
 #pragma mark - Actions
 
 - (IBAction)takePicture:(id)sender {
+    
+    // Creamos un UIImagePickerController
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    // -------------- Lo configuramos ---------------
+    // Compruebo si el dispositivo tiene camara
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        // Uso la camara
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }else{
+        // Tiro de la galeria
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    // Asigno el delegado
+    picker.delegate = self;
+    
+    // Lo muetro de forma modal
+    [self presentViewController:picker
+                       animated:YES
+                     completion:^{
+                        // Esto se va a ejecutar cuando termine la animacion que muestra al picker
+                     }];
 }
 
 - (IBAction)applyFilter:(id)sender {

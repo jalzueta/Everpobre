@@ -10,7 +10,8 @@
 
 @class FLGPhoto;
 
-@interface FLGPhotoViewController : UIViewController
+// ponemos "UINavigationControllerDelegate" porque el UIImagePickerController es también un UINavigationController. Si no lo ponemos, el compilador se queja
+@interface FLGPhotoViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 
