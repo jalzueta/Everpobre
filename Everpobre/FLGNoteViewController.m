@@ -115,18 +115,57 @@
 // UIKeyboardWillShowNotification
 - (void) notifyThatKeyboardWillAppear: (NSNotification *) n{
     
-    // Sacar el tamaño (bounds) del keyboard del objeto
-    // userInfo que vien en la notificacion
+    // Guardo el frame original de self.textView
+    self.textViewInitialFrame = self.textView.frame;
     
+    // --------------- userInfo que viene en la notificacion -------------------
+    // Sacar el tamaño (bounds) del keyboard del objeto
+    // NSValue es un contenedor de clases de c que no son objetos, para poderlos meter en colecciones: diccionarios, arrays...
+    NSValue *wrappedFrame = [n.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect kbEndFrame = [wrappedFrame CGRectValue];
+    
+    // Sacar la aceleracion
+    int curve = [[n.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
+    
+    // Sacar la duracion
+    double duration = [[n.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     // Calcular los nuevos bounds de self.textView y encogerlo mediante animación que coincida con la de aparicion del teclado
+    CGRect currentFrame = self.textView.frame;
+    CGRect newFrame = CGRectMake(currentFrame.origin.x,
+                                 currentFrame.origin.y,
+                                 currentFrame.size.width,
+                                 currentFrame.size.height - kbEndFrame.size.height + self.bottomBar.frame.size.height);
     
+    [UIView animateWithDuration:duration
+                          delay:0
+                        options:curve
+                     animations:^{
+                         self.textView.frame = newFrame;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 // UIKeyboardWillHideNotification
 - (void) notifyThatKeyboardWillDisappear: (NSNotification *) n{
     
     // Devolver a self.textView su bounds original mediante una animacion que coincida con la del teclado
+    
+    // Sacar la aceleracion
+    int curve = [[n.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
+    
+    // Sacar la duracion
+    double duration = [[n.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration
+                          delay:0
+                        options:curve
+                     animations:^{
+                         self.textView.frame = self.textViewInitialFrame;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 @end

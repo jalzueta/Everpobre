@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLGNoteViewController">
             <connections>
+                <outlet property="bottomBar" destination="Wm6-UJ-ara" id="2I1-ct-MXL"/>
                 <outlet property="creationDateView" destination="SDU-vA-Tns" id="GYV-23-pvI"/>
                 <outlet property="modificationDateView" destination="gwL-Lu-n0O" id="SvG-Lw-t6H"/>
                 <outlet property="nameView" destination="jJu-ik-vma" id="70a-rb-A9I"/>

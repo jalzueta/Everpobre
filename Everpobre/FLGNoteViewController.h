@@ -16,8 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *modificationDateView;
 @property (weak, nonatomic) IBOutlet UITextField *nameView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
 
 @property (strong, nonatomic) FLGNote *model;
+@property (nonatomic) CGRect textViewInitialFrame;
 
 - (id) initWithModel: (FLGNote *) model;
 
