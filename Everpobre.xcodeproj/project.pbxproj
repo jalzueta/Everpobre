@@ -12,6 +12,8 @@
 		59DB8CDB1AD726970040BDA4 /* FLGNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DB8CD91AD726970040BDA4 /* FLGNoteViewController.xib */; };
 		59DB8CE01AD85A010040BDA4 /* FLGPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CDE1AD85A010040BDA4 /* FLGPhotoViewController.m */; };
 		59DB8CE11AD85A010040BDA4 /* FLGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DB8CDF1AD85A010040BDA4 /* FLGPhotoViewController.xib */; };
+		59DB8CE71AD8889D0040BDA4 /* _FLGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CE41AD8889D0040BDA4 /* _FLGLocation.m */; };
+		59DB8CE81AD8889D0040BDA4 /* FLGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DB8CE61AD8889D0040BDA4 /* FLGLocation.m */; };
 		59F0169F1AD4794F00F36FE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F0169E1AD4794F00F36FE6 /* main.m */; };
 		59F016A21AD4794F00F36FE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F016A11AD4794F00F36FE6 /* AppDelegate.m */; };
 		59F016A41AD4794F00F36FE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F016A31AD4794F00F36FE6 /* Images.xcassets */; };
@@ -52,6 +54,10 @@
 		59DB8CDE1AD85A010040BDA4 /* FLGPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGPhotoViewController.m; sourceTree = "<group>"; };
 		59DB8CDF1AD85A010040BDA4 /* FLGPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLGPhotoViewController.xib; sourceTree = "<group>"; };
 		59DB8CE21AD884CB0040BDA4 /* FLGModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FLGModel2.xcdatamodel; sourceTree = "<group>"; };
+		59DB8CE31AD8889D0040BDA4 /* _FLGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FLGLocation.h; sourceTree = "<group>"; };
+		59DB8CE41AD8889D0040BDA4 /* _FLGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FLGLocation.m; sourceTree = "<group>"; };
+		59DB8CE51AD8889D0040BDA4 /* FLGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLGLocation.h; sourceTree = "<group>"; };
+		59DB8CE61AD8889D0040BDA4 /* FLGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLGLocation.m; sourceTree = "<group>"; };
 		59F016991AD4794F00F36FE6 /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F0169D1AD4794F00F36FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F0169E1AD4794F00F36FE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +181,8 @@
 				59F016DE1AD490F200F36FE6 /* FLGNotebook.m */,
 				59F016DF1AD490F200F36FE6 /* FLGPhoto.h */,
 				59F016E01AD490F200F36FE6 /* FLGPhoto.m */,
+				59DB8CE51AD8889D0040BDA4 /* FLGLocation.h */,
+				59DB8CE61AD8889D0040BDA4 /* FLGLocation.m */,
 				59F016F41AD5A9A800F36FE6 /* Core Data Stack */,
 				59F016BC1AD47AB100F36FE6 /* FLGModel.xcdatamodeld */,
 				59F016F51AD5C26200F36FE6 /* FLGEverpobreBaseClass.h */,
@@ -186,6 +194,8 @@
 		59F016E71AD490FD00F36FE6 /* Machine */ = {
 			isa = PBXGroup;
 			children = (
+				59DB8CE31AD8889D0040BDA4 /* _FLGLocation.h */,
+				59DB8CE41AD8889D0040BDA4 /* _FLGLocation.m */,
 				59F016D51AD490F200F36FE6 /* _FLGNote.h */,
 				59F016D61AD490F200F36FE6 /* _FLGNote.m */,
 				59F016D71AD490F200F36FE6 /* _FLGNotebook.h */,
@@ -348,8 +358,10 @@
 				59F016E51AD490F200F36FE6 /* FLGNotebook.m in Sources */,
 				59F016E41AD490F200F36FE6 /* FLGNote.m in Sources */,
 				59F0169F1AD4794F00F36FE6 /* main.m in Sources */,
+				59DB8CE71AD8889D0040BDA4 /* _FLGLocation.m in Sources */,
 				59F016E11AD490F200F36FE6 /* _FLGNote.m in Sources */,
 				59F016E31AD490F200F36FE6 /* _FLGPhoto.m in Sources */,
+				59DB8CE81AD8889D0040BDA4 /* FLGLocation.m in Sources */,
 				59DB8CE01AD85A010040BDA4 /* FLGPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

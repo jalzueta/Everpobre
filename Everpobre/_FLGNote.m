@@ -11,6 +11,7 @@ const struct FLGNoteAttributes FLGNoteAttributes = {
 };
 
 const struct FLGNoteRelationships FLGNoteRelationships = {
+	.location = @"location",
 	.notebook = @"notebook",
 	.photo = @"photo",
 };
@@ -51,6 +52,8 @@ const struct FLGNoteRelationships FLGNoteRelationships = {
 @dynamic name;
 
 @dynamic text;
+
+@dynamic location;
 
 @dynamic notebook;
 

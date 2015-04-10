@@ -12,10 +12,12 @@ extern const struct FLGNoteAttributes {
 } FLGNoteAttributes;
 
 extern const struct FLGNoteRelationships {
+	__unsafe_unretained NSString *location;
 	__unsafe_unretained NSString *notebook;
 	__unsafe_unretained NSString *photo;
 } FLGNoteRelationships;
 
+@class FLGLocation;
 @class FLGNotebook;
 @class FLGPhoto;
 
@@ -44,6 +46,10 @@ extern const struct FLGNoteRelationships {
 
 //- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) FLGLocation *location;
+
+//- (BOOL)validateLocation:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) FLGNotebook *notebook;
 
 //- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
@@ -67,6 +73,9 @@ extern const struct FLGNoteRelationships {
 
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
+
+- (FLGLocation*)primitiveLocation;
+- (void)setPrimitiveLocation:(FLGLocation*)value;
 
 - (FLGNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(FLGNotebook*)value;
