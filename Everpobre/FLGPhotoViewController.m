@@ -85,8 +85,29 @@
 }
 
 - (IBAction)deletePhoto:(id)sender {
+    
+    // La eliminamos del modelo
+    self.model.image = nil;
+    
+    // GUardamos el bounds inicial
+    CGRect oldRect = self.photoView.bounds;
+    // frame: se refiere al sistema de coordenadas de su supervista
+    // bounds: se refiere al sistema de coordenadas global
+    
+    // Sincronizo modelo -> vista
+    [UIView animateWithDuration:0.7
+                     animations:^{
+                         self.photoView.alpha = 0;
+                         self.photoView.bounds = CGRectZero;
+                         self.photoView.transform = CGAffineTransformMakeRotation(M_1_PI);
+                     } completion:^(BOOL finished) {
+                         
+                         self.photoView.image = nil;
+                         self.photoView.transform = CGAffineTransformIdentity;
+                         self.photoView.bounds = oldRect;
+                         self.photoView.alpha = 1;
+                     }];
 }
-
 
 #pragma mark - UIImagePickerControllerDelegate
 
